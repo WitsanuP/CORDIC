@@ -101,6 +101,7 @@ double thv_cordic_log2(double V, int n_iterations) {
             x = x_new;
             y = y_new;
             z = z_new;
+            printf("j = %3d : x = %13.10lf, y = %13.10lf, z = %13.10lf (repeat)\n", j, x, y, z);
         }
         printf("j = %3d : x = %13.10lf, y = %13.10lf, z = %13.10lf\n", j, x, y, z);
     }
@@ -156,7 +157,6 @@ int main() {
     printf("--- Testing log2(R) with %d iterations ---\n", n_iter);
     printf("--- (Comparing CORDIC vs. math.h log2) ---\n");
 
-
     printf("input R_values : ");
     scanf("%lf", &R_values); 
     double R = R_values;
@@ -175,9 +175,7 @@ int main() {
     printf("  Relative  Error: %9.2e\n", rel_error);
     printf("  Relative %%Error: %.2lf %%\n", rel_error*100);
     
-    
     printf("  (Paper's ARE for n=16 is 2.09e-6) \n");
-
 
     return 0;
 }
