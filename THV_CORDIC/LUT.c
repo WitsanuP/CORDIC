@@ -24,6 +24,7 @@ int main() {
         if(j<11)      printf("%.15lf,     // j=%d\n", val_atanh_div_ln2, j);
         else if(j<16) printf("%.15e, // j=%d\n", val_atanh_div_ln2, j);
         else          printf("%.15e  // j=%d\n", val_atanh_div_ln2, j);
+        
 //         printf("%2d | %.19lf\n", j, val_atanh_div_ln2);
     }
 
